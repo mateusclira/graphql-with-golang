@@ -1,0 +1,28 @@
+mutation createCategory {
+  createCategory (input: {name:"Tecnologia", description:"Cursos de Tecnologia"}) {
+  id
+  name 
+  description
+  }
+}
+
+mutation createCourse {
+  createCourse (input: {name:"LiraTech", description:"Cursos de Tecnologia",categoryId: "fa332cf6-da32-424e-92bf-05e7032b1bd2" }) {
+  id
+  name 
+  }
+}
+query queryCategories {
+  categories{
+    id
+    name
+    description
+  }
+}
+
+query queryCourses {
+  courses {
+    id
+    name
+  }
+}
